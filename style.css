@@ -1,0 +1,80 @@
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    width: 90vw;
+    height: 70vh;
+      
+    display: grid;
+    grid-template-rows: 0.5fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    
+  }
+
+header {
+    grid-row: 1;
+    grid-column: 1 / span 5;
+  }
+h1 {
+      text-align: center;
+      color: black;
+      font-size: x-large;
+      margin: 20px;
+  }
+
+#cell1 {
+      border: 1px 0px 0px 0px solid black;      
+}
+#cell2 {
+      grid-row: 2;
+      grid-column: 2 / span 1;
+      border-right: solid black;
+      border-bottom: solid black;
+      font-style: normal;
+
+}
+#cell3 {
+    grid-row: 2;
+    grid-column: 3 / span 1;
+    border-bottom:solid black;
+    
+}
+#cell4 {
+    grid-row: 2;
+    grid-column: 4 / span 1;
+    border-left: solid black;
+    border-bottom:solid black;
+
+}
+#cell7 {
+grid-row: 3;
+grid-column: 2 / span 1;
+border-right: solid black;
+}
+#cell9 {
+    grid-row: 3;
+    grid-column: 4 / span 1;
+    border-left: solid black;
+}
+#cell12 {
+    grid-row: 4;
+    grid-column: 2 / span 1;
+    border-top: solid black;
+    border-right: solid black;    
+}
+#cell13 {
+    grid-row: 4;
+    grid-column: 3 / span 1;
+    border-top: solid black;
+}
+#cell14 {
+    grid-row: 4;
+    grid-column: 4 / span 1;
+    border-top: solid black;
+    border-left: solid black;
+}
+#message {
+    grid-row: 5;
+    grid-column: 1 / span 5;
+    text-align: center;
+    color: black;
+    margin: 40px;
+}
