@@ -1,5 +1,3 @@
-console.log('Here!');
-
 const body = document.querySelector("body");
 const message = document.querySelector('#message');
 
@@ -32,17 +30,22 @@ cell14.addEventListener('click', inputCell14);
 
 let player = 1;
 function inputCell2(){
+    if(cell2.innerHTML === 'X' || cell2.innerHTML === 'O'){
+        alert("This square is taken")}else{
     if(player === 1){
         cell2.innerHTML = 'X';
         player = 0;
         message.innerHTML = 'Player 2, your turn.'
-    }else{
+        }else{
         cell2.innerHTML = 'O';
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
+        }
     }
 }
 function inputCell3(){
+    if(cell3.innerHTML === 'X' || cell3.innerHTML === 'O'){
+        alert("This square is taken")}else{
     if(player === 1){
         cell3.innerHTML = 'X';
         player = 0;      
@@ -52,8 +55,11 @@ function inputCell3(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
+  }
 }
 function inputCell4(){
+    if(cell4.innerHTML === 'X' || cell4.innerHTML === 'O'){
+        alert("This square is taken")}else{
     if(player === 1){
         cell4.innerHTML = 'X';
         player = 0;
@@ -63,8 +69,11 @@ function inputCell4(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
+  }
 }
 function inputCell7(){
+    if(cell7.innerHTML === 'X' || cell7.innerHTML === 'O'){
+        alert("This square is taken")}else{
     if(player === 1){
         cell7.innerHTML = 'X';
         player = 0;
@@ -74,8 +83,11 @@ function inputCell7(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
+  }
 }
 function inputCell8(){
+    if(cell8.innerHTML === 'X' || cell8.innerHTML === 'O'){
+        alert("This square is taken")}else{
     if(player === 1){
         cell8.innerHTML = 'X';
         player = 0;
@@ -85,8 +97,11 @@ function inputCell8(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
+  }
 }
 function inputCell9(){
+    if(cell9.innerHTML === 'X' || cell9.innerHTML === 'O'){
+        alert("This square is taken")}else{
     if(player === 1){
         cell9.innerHTML = 'X';
         player = 0;
@@ -96,8 +111,11 @@ function inputCell9(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
+  }
 }
 function inputCell12(){
+    if(cell12.innerHTML === 'X' || cell12.innerHTML === 'O'){
+        alert("This square is taken")}else{
     if(player === 1){
         cell12.innerHTML = 'X';
         player = 0;
@@ -107,8 +125,11 @@ function inputCell12(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
+ }
 }
 function inputCell13(){
+    if(cell13.innerHTML === 'X' || cell13.innerHTML === 'O'){
+        alert("This square is taken")}else{
     if(player === 1){
         cell13.innerHTML = 'X';
         player = 0;
@@ -118,8 +139,11 @@ function inputCell13(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
+  }
 }
 function inputCell14(){
+    if(cell14.innerHTML === 'X' || cell14.innerHTML === 'O'){
+        alert("This square is taken")}else{
     if(player === 1){
         cell14.innerHTML = 'X';
         player = 0;
@@ -129,6 +153,7 @@ function inputCell14(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
+ }
 }
 
 // function winner() {
