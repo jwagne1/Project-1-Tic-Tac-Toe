@@ -169,10 +169,11 @@ function inputCell14(){
     }
  } winner();
 }
-
+let whoWon = 0;
 function winner() {
-    if((cell2.innerHTML === 'X' || cell2.innerHTML === 'O') && (cell3.innerHTML === 'X'|| cell3.innerHTML === 'O') && (cell4.innerHTML === 'X'|| cell4.innerHTML === 'O') && (cell7.innerHTML === 'X'|| cell7.innerHTML === 'O') && (cell8.innerHTML === 'X'|| cell8.innerHTML === 'O') && (cell9.innerHTML === 'X'|| cell9.innerHTML === 'O') && (cell12.innerHTML === 'X'|| cell12.innerHTML === 'O') && (cell13.innerHTML === 'X'|| cell13.innerHTML === 'O') && (cell14.innerHTML === 'X'|| cell14.innerHTML === 'O')){
-        message.innerHTML = 'Tie! Want to play again?';}else{
+    if((cell2.innerHTML === 'X' || cell2.innerHTML === 'O') && (cell3.innerHTML === 'X'|| cell3.innerHTML === 'O') && (cell4.innerHTML === 'X'|| cell4.innerHTML === 'O') && (cell7.innerHTML === 'X'|| cell7.innerHTML === 'O') && (cell8.innerHTML === 'X'|| cell8.innerHTML === 'O') && (cell9.innerHTML === 'X'|| cell9.innerHTML === 'O') && (cell12.innerHTML === 'X'|| cell12.innerHTML === 'O') && (cell13.innerHTML === 'X'|| cell13.innerHTML === 'O') && (cell14.innerHTML === 'X'|| cell14.innerHTML === 'O') && (whoWon = 0)) {
+        message.innerHTML = 'Tie! Want to play again?';
+    }else{
     if ((cell2.innerHTML === 'X' && 
         cell3.innerHTML === 'X' && 
         cell4.innerHTML === 'X') 
@@ -204,7 +205,9 @@ function winner() {
         (cell4.innerHTML === 'X' && 
         cell8.innerHTML === 'X' && 
         cell12.innerHTML === 'X'))
-        {message.innerHTML = 'Player 1 wins!';        
+        {
+        message.innerHTML = 'Player 1 wins!';
+        whoWon = 1;        
     }else if((cell2.innerHTML === 'O' && 
         cell3.innerHTML === 'O' && 
         cell4.innerHTML === 'O') 
@@ -236,10 +239,11 @@ function winner() {
         (cell4.innerHTML === 'O' && 
         cell8.innerHTML === 'O' && 
         cell12.innerHTML === 'O'))
-    {    
-    message.innerHTML = 'Player 2 wins!';
-    }      
-  }
+        {    
+        message.innerHTML = 'Player 2 wins!';
+        whoWon = 2;
+        }      
+    }
 }
   
 // body.onclick = e => {
