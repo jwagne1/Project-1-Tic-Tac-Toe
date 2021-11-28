@@ -28,10 +28,24 @@ cell13.addEventListener('click', inputCell13);
 const cell14 = document.querySelector('#cell14');
 cell14.addEventListener('click', inputCell14);
 
+const newGameButton = document.querySelector('#new-game');
+newGameButton.addEventListener('click',clearSquare);
+const grid = document.querySelectorAll('.square');
+// console.log(grid);
+
+function clearSquare (){
+    for (let i=0; i <grid.length; i++){
+        grid[i].innerHTML='';
+    }
+    message.innerHTML = 'Player 1, click on a square to start';
+    player = 1;    
+}
+
 let player = 1;
 function inputCell2(){
     if(cell2.innerHTML === 'X' || cell2.innerHTML === 'O'){
-        alert("This square is taken")}else{
+        alert("This square is taken");
+    }else{
     if(player === 1){
         cell2.innerHTML = 'X';
         player = 0;
@@ -41,7 +55,7 @@ function inputCell2(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
         }
-    }
+    } winner();
 }
 function inputCell3(){
     if(cell3.innerHTML === 'X' || cell3.innerHTML === 'O'){
@@ -55,7 +69,7 @@ function inputCell3(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
-  }
+  } winner();
 }
 function inputCell4(){
     if(cell4.innerHTML === 'X' || cell4.innerHTML === 'O'){
@@ -69,7 +83,7 @@ function inputCell4(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
-  }
+  } winner();
 }
 function inputCell7(){
     if(cell7.innerHTML === 'X' || cell7.innerHTML === 'O'){
@@ -83,7 +97,7 @@ function inputCell7(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
-  }
+  } winner();
 }
 function inputCell8(){
     if(cell8.innerHTML === 'X' || cell8.innerHTML === 'O'){
@@ -97,7 +111,7 @@ function inputCell8(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
-  }
+  } winner();
 }
 function inputCell9(){
     if(cell9.innerHTML === 'X' || cell9.innerHTML === 'O'){
@@ -111,7 +125,7 @@ function inputCell9(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
-  }
+  } winner();
 }
 function inputCell12(){
     if(cell12.innerHTML === 'X' || cell12.innerHTML === 'O'){
@@ -125,7 +139,7 @@ function inputCell12(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
- }
+ } winner(); 
 }
 function inputCell13(){
     if(cell13.innerHTML === 'X' || cell13.innerHTML === 'O'){
@@ -139,7 +153,7 @@ function inputCell13(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
-  }
+  } winner();
 }
 function inputCell14(){
     if(cell14.innerHTML === 'X' || cell14.innerHTML === 'O'){
@@ -153,35 +167,81 @@ function inputCell14(){
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
     }
- }
+ } winner();
 }
 
-// function winner() {
-//     if(cell2.innerHTML === 'X' && cell3.innerHTML === 'X'&& cell4.innerHTML === 'X'){
-//     console.log("Player 1 wins");
-//     }
-// }
-// winner();
-// body.onclick = e => {
-//     console.log(e.target.id);
-// }
-
-
-// function player1(){
-// const xCharacter = document.createElement('p');
-// xCharacter.setAttribute('id','xLetter');
-// xCharacter.innerText = 'X';
-// cell2.appendChild(xCharacter);
-// }
-// const grid = document.querySelectorAll('.grid');
-
-// function player2(){
-//     const oCharacter = document.createElement('p');
-//     oCharacter.setAttribute('id','oLetter');
-//     oCharacter.innerText = 'O';
-//     cell3.appendChild(oCharacter);
-//     }
-    
+function winner() {
+    if((cell2.innerHTML === 'X' || cell2.innerHTML === 'O') && (cell3.innerHTML === 'X'|| cell3.innerHTML === 'O') && (cell4.innerHTML === 'X'|| cell4.innerHTML === 'O') && (cell7.innerHTML === 'X'|| cell7.innerHTML === 'O') && (cell8.innerHTML === 'X'|| cell8.innerHTML === 'O') && (cell9.innerHTML === 'X'|| cell9.innerHTML === 'O') && (cell12.innerHTML === 'X'|| cell12.innerHTML === 'O') && (cell13.innerHTML === 'X'|| cell13.innerHTML === 'O') && (cell14.innerHTML === 'X'|| cell14.innerHTML === 'O')){
+        message.innerHTML = 'Tie! Want to play again?';}else{
+    if ((cell2.innerHTML === 'X' && 
+        cell3.innerHTML === 'X' && 
+        cell4.innerHTML === 'X') 
+        || 
+        (cell7.innerHTML === 'X' && 
+        cell8.innerHTML === 'X' && 
+        cell9.innerHTML === 'X') 
+        || 
+        (cell12.innerHTML === 'X' && 
+        cell13.innerHTML === 'X' && 
+        cell14.innerHTML === 'X') 
+        ||
+        (cell2.innerHTML === 'X' && 
+        cell7.innerHTML === 'X' && 
+        cell12.innerHTML === 'X') 
+        ||
+        (cell3.innerHTML === 'X' && 
+        cell8.innerHTML === 'X' && 
+        cell13.innerHTML === 'X') 
+        ||
+        (cell4.innerHTML === 'X' && 
+        cell9.innerHTML === 'X' && 
+        cell14.innerHTML === 'X') 
+        ||
+        (cell2.innerHTML === 'X' && 
+        cell8.innerHTML === 'X' && 
+        cell14.innerHTML === 'X') 
+        ||
+        (cell4.innerHTML === 'X' && 
+        cell8.innerHTML === 'X' && 
+        cell12.innerHTML === 'X'))
+        {message.innerHTML = 'Player 1 wins!';        
+    }else if((cell2.innerHTML === 'O' && 
+        cell3.innerHTML === 'O' && 
+        cell4.innerHTML === 'O') 
+        ||
+        (cell7.innerHTML === 'O' && 
+        cell8.innerHTML === 'O' && 
+        cell9.innerHTML === 'O') 
+        ||
+        (cell12.innerHTML === 'O' && 
+        cell13.innerHTML === 'O' && 
+        cell14.innerHTML === 'O') 
+        ||
+        (cell2.innerHTML === 'O' && 
+        cell7.innerHTML === 'O' && 
+        cell12.innerHTML === 'O') 
+        ||
+        (cell3.innerHTML === 'O' && 
+        cell8.innerHTML === 'O' && 
+        cell13.innerHTML === 'O')
+        ||
+        (cell4.innerHTML === 'O' && 
+        cell9.innerHTML === 'O' && 
+        cell14.innerHTML === 'O')
+        ||
+        (cell2.innerHTML === 'O' && 
+        cell8.innerHTML === 'O' && 
+        cell14.innerHTML === 'O')
+        ||
+        (cell4.innerHTML === 'O' && 
+        cell8.innerHTML === 'O' && 
+        cell12.innerHTML === 'O'))
+    {    
+    message.innerHTML = 'Player 2 wins!';
+    }      
+  }
+}
+  
 // body.onclick = e => {
 //    return e.target.id;  // to get the element
 // //     // console.log(e.target.class);  // to get the element tag name alone
