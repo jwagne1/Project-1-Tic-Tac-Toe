@@ -98,5 +98,6 @@ border-right: 5px solid black;
 }
 .square{
     font-size: 8vh;    
-    text-align: center;    
+    text-align: center;
+    vertical-align: middle;    
 }
