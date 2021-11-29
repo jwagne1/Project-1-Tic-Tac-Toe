@@ -307,8 +307,9 @@ function finalMessage(){
 }
 
 // body.onclick = e => {
-//    console.log(e.target);  // to get the element
-// //     // console.log(e.target.class);  // to get the element tag name alone
+// console.log(e.target);  // to get the element
+// console.log(e.target.id);  // to get the element tag name alone
+// }
 
 
 
