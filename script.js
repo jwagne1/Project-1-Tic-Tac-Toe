@@ -38,13 +38,21 @@ function clearSquare (){
         grid[i].innerHTML='';
     }
     message.innerHTML = 'Player 1, click on a square to start';
-    player = 1;    
+    player = 1; 
+    squareTaken = 0; 
+    whoWon = 0;  
 }
-
+let squareTaken = 0;
+function squaresFull (){
+    squareTaken = squareTaken + 1;
+}
 let player = 1;
 function inputCell2(){
+    if(whoWon !== 0){
+        finalMessage();
+    }else{
     if(cell2.innerHTML === 'X' || cell2.innerHTML === 'O'){
-        alert("This square is taken");
+        message.innerHTML = "This square is taken, select an empty one";
     }else{
     if(player === 1){
         cell2.innerHTML = 'X';
@@ -54,12 +62,17 @@ function inputCell2(){
         cell2.innerHTML = 'O';
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
-        }
-    } winner();
+        } squaresFull();
+    } winner();    
 }
-function inputCell3(){
+}
+function inputCell3(){    
+    if(whoWon !== 0){
+        finalMessage();
+    }else{
     if(cell3.innerHTML === 'X' || cell3.innerHTML === 'O'){
-        alert("This square is taken")}else{
+        message.innerHTML = "This square is taken, select an empty one";
+    }else{
     if(player === 1){
         cell3.innerHTML = 'X';
         player = 0;      
@@ -68,12 +81,17 @@ function inputCell3(){
         cell3.innerHTML = 'O';
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
-    }
-  } winner();
+    } squaresFull();
+  } winner();  
+}
 }
 function inputCell4(){
+    if(whoWon !== 0){
+        finalMessage();
+    }else{
     if(cell4.innerHTML === 'X' || cell4.innerHTML === 'O'){
-        alert("This square is taken")}else{
+        message.innerHTML = "This square is taken, select an empty one";
+    }else{
     if(player === 1){
         cell4.innerHTML = 'X';
         player = 0;
@@ -82,12 +100,17 @@ function inputCell4(){
         cell4.innerHTML = 'O';
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
-    }
-  } winner();
+    }squaresFull();
+  } winner();  
 }
-function inputCell7(){
+}
+function inputCell7(){    
+    if(whoWon !== 0){
+        finalMessage();
+    }else{
     if(cell7.innerHTML === 'X' || cell7.innerHTML === 'O'){
-        alert("This square is taken")}else{
+        message.innerHTML = "This square is taken, select an empty one";
+    }else{
     if(player === 1){
         cell7.innerHTML = 'X';
         player = 0;
@@ -96,12 +119,17 @@ function inputCell7(){
         cell7.innerHTML = 'O';
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
-    }
-  } winner();
+    }squaresFull();
+  } winner();  
+}
 }
 function inputCell8(){
+    if(whoWon !== 0){
+        finalMessage();
+    }else{
     if(cell8.innerHTML === 'X' || cell8.innerHTML === 'O'){
-        alert("This square is taken")}else{
+        message.innerHTML = "This square is taken, select an empty one";
+    }else{
     if(player === 1){
         cell8.innerHTML = 'X';
         player = 0;
@@ -110,12 +138,17 @@ function inputCell8(){
         cell8.innerHTML = 'O';
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
-    }
-  } winner();
+    }squaresFull();
+  } winner();  
+}
 }
 function inputCell9(){
+    if(whoWon !== 0){
+        finalMessage();
+    }else{    
     if(cell9.innerHTML === 'X' || cell9.innerHTML === 'O'){
-        alert("This square is taken")}else{
+        message.innerHTML = "This square is taken, select an empty one";
+    }else{
     if(player === 1){
         cell9.innerHTML = 'X';
         player = 0;
@@ -124,12 +157,17 @@ function inputCell9(){
         cell9.innerHTML = 'O';
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
-    }
-  } winner();
+    }squaresFull();
+  } winner();  
+ }
 }
 function inputCell12(){
+    if(whoWon !== 0){
+        finalMessage();
+    }else{    
     if(cell12.innerHTML === 'X' || cell12.innerHTML === 'O'){
-        alert("This square is taken")}else{
+        message.innerHTML = "This square is taken, select an empty one";
+    }else{
     if(player === 1){
         cell12.innerHTML = 'X';
         player = 0;
@@ -138,12 +176,17 @@ function inputCell12(){
         cell12.innerHTML = 'O';
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
-    }
- } winner(); 
+    }squaresFull();
+  } winner(); 
+ }
 }
-function inputCell13(){
+function inputCell13(){    
+    if(whoWon !== 0){
+        finalMessage();
+    }else{
     if(cell13.innerHTML === 'X' || cell13.innerHTML === 'O'){
-        alert("This square is taken")}else{
+        message.innerHTML = "This square is taken, select an empty one";
+    }else{
     if(player === 1){
         cell13.innerHTML = 'X';
         player = 0;
@@ -152,12 +195,17 @@ function inputCell13(){
         cell13.innerHTML = 'O';
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
-    }
-  } winner();
+    }squaresFull();
+  } winner();  
+ }
 }
-function inputCell14(){
+function inputCell14(){    
+    if(whoWon !== 0){
+        finalMessage();
+    }else{
     if(cell14.innerHTML === 'X' || cell14.innerHTML === 'O'){
-        alert("This square is taken")}else{
+        message.innerHTML = "This square is taken, select an empty one";
+    }else{
     if(player === 1){
         cell14.innerHTML = 'X';
         player = 0;
@@ -166,15 +214,14 @@ function inputCell14(){
         cell14.innerHTML = 'O';
         player = 1;
         message.innerHTML = 'Player 1, your turn.'
-    }
- } winner();
+    }squaresFull();
+  } winner(); 
+ }
 }
 let whoWon = 0;
 function winner() {
-    if((cell2.innerHTML === 'X' || cell2.innerHTML === 'O') && (cell3.innerHTML === 'X'|| cell3.innerHTML === 'O') && (cell4.innerHTML === 'X'|| cell4.innerHTML === 'O') && (cell7.innerHTML === 'X'|| cell7.innerHTML === 'O') && (cell8.innerHTML === 'X'|| cell8.innerHTML === 'O') && (cell9.innerHTML === 'X'|| cell9.innerHTML === 'O') && (cell12.innerHTML === 'X'|| cell12.innerHTML === 'O') && (cell13.innerHTML === 'X'|| cell13.innerHTML === 'O') && (cell14.innerHTML === 'X'|| cell14.innerHTML === 'O') && (whoWon = 0)) {
-        message.innerHTML = 'Tie! Want to play again?';
-    }else{
-    if ((cell2.innerHTML === 'X' && 
+    if (whoWon === 0){    
+        if ((cell2.innerHTML === 'X' && 
         cell3.innerHTML === 'X' && 
         cell4.innerHTML === 'X') 
         || 
@@ -242,10 +289,20 @@ function winner() {
         {    
         message.innerHTML = 'Player 2 wins!';
         whoWon = 2;
-        }      
+        }else if((squareTaken === 9) && (whoWon === 0)) {
+        message.innerHTML = 'Tie! Want to play again?';           
+        }
+    }console.log(whoWon);
+} 
+function finalMessage(){
+    if(whoWon === 1){
+        message.innerHTML = 'Player 1 won! Want to play again?';
+    }else{ if(whoWon === 2){
+        message.innerHTML = 'Player 2 won! Want to play again?';
+        }
     }
 }
-  
+
 // body.onclick = e => {
 //    return e.target.id;  // to get the element
 // //     // console.log(e.target.class);  // to get the element tag name alone
