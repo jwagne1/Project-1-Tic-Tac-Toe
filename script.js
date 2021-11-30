@@ -1,3 +1,4 @@
+//In section below I selected the elements using DOM to add event listeners when each square is clicked.
 const body = document.querySelector("body");
 const message = document.querySelector('#message');
 
@@ -32,8 +33,8 @@ const newGameButton = document.querySelector('#new-game');
 newGameButton.addEventListener('click',clearSquare);
 
 const grid = document.querySelectorAll('.square');
-// console.log(grid);
 
+//Fucntion below is used to clear the game when newGameButton is clicked. 
 function clearSquare (){
     for (let i=0; i <grid.length; i++){
         grid[i].innerHTML='';
@@ -43,12 +44,12 @@ function clearSquare (){
     squareTaken = 0; 
     whoWon = 0;  
 }
-
+//Function below is used to warn a player that a square has already been selected.
 let squareTaken = 0;
 function squaresFull (){
     squareTaken = squareTaken + 1;
 }
-
+//The functions below are used to evaluate if a winner has been determined yet, and fire function: squareTaken in case the square is full. Also to fire function: winner, so that the game ends once a player has won.
 let player = 1;
 function inputCell2(){
     if(whoWon !== 0){
@@ -202,6 +203,7 @@ function inputCell13(){
         } winner();  
     }
 }
+//Function: whoWon, coded below, evaluates if winner has been determined and stops player from selecting a new cell in case there is a winner, firing function: finalMessage, which reminds players if there is a winner or game ended in tie.
 function inputCell14(){    
     if(whoWon !== 0){
         finalMessage();
@@ -221,6 +223,7 @@ function inputCell14(){
         } winner(); 
     }
 }
+//Function winner, coded below, evaluates all possible win scenarios and displays the winner.
 let whoWon = 0;
 function winner() {
     if (whoWon === 0){    
@@ -297,6 +300,7 @@ function winner() {
             }
     } //console.log(whoWon);
 } 
+//Function below stops players from continuing to play by displaying who the winner is and asking player if they want to play again.
 function finalMessage(){
     if(whoWon === 1){
         message.innerHTML = 'Player 1 won! Want to play again?';
@@ -305,12 +309,4 @@ function finalMessage(){
         }
     }
 }
-
-// body.onclick = e => {
-// console.log(e.target);  // to get the element
-// console.log(e.target.id);  // to get the element tag name alone
-// }
-
-
-
 
