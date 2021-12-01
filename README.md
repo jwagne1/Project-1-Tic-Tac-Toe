@@ -31,5 +31,5 @@ MS Excel - for wireframing and tracking progress
 
 ### Planning, Development, and Problem-solving strategy
 1. Planning - I started the process reading through the [project assignment respository](https://git.generalassemb.ly/java-interapt-11-8/Project-1), to try to clarify what the scope and expected deliverables were. I then implemented these steps to get organized: 
-* created an excel file of deliverables to track my progress as I went through the coding process. 
+ * created an excel file of deliverables to track my progress as I went through the coding process. 
 
