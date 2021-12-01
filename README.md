@@ -51,7 +51,7 @@ MS Excel - for wireframing and tracking progress
 
 ### Improvements for future iterations
 * Code to be cleaned and completely adhere to DRY. 
-* Make webpage 100% mobile friendly. Currently displaying differently in mobile firefox and safari.
+* Make webpage 100% mobile friendly. Currently displaying differently in mobile Firefox and Safari.
 * Add background music and sound effects in game.
 * Use [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to persist data locally to allow games to continue after page refresh or loss of internet connectivity.
 * Create an AI opponent: teach JavaScript to play an unbeatable game against human.
