@@ -24,10 +24,10 @@ Recommended browsers include:
 * As a user, I should be able to play the game again without refreshing the page
 
 ### Technologies used to build the project
-HyperText Markup Language (HTML)
-Cascading Style Sheets (CSS)
-JavaScript
-MS Excel - for wireframing and tracking progress
+* HyperText Markup Language (HTML)
+* Cascading Style Sheets (CSS)
+* JavaScript
+* MS Excel - for wireframing and tracking progress
 
 ### Planning, Development, and Problem-solving
 1. Planning - I started the process reading through the [project assignment respository](https://git.generalassemb.ly/java-interapt-11-8/Project-1), to try to clarify what the scope and expected deliverables were. I then implemented these steps to get organized: 
