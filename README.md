@@ -46,7 +46,7 @@ Recommended browsers include:
     * Referred back to comments I made in the code of the labs we had in class.
     * Try and try again, then try something different, until finally the issue was solved.
     * Moved onto next bug.
-4. To solve for the winner, the function "winner" used an "if else" statement to evaluate each possible scenario for player 1, then for player 2. If no winner was determined then declared a Tie.
+4. To solve for the winner, the function "winner" used an "if else" statement to evaluate each possible scenario for player 1, then for player 2. If no winner was determined, then it declares a Tie.
 5. To clear the board, when "newGameButton" is clicked, function "clearSquare" uses a for loop to delete the innerHTML inside each square, reset the color of the text in "message" below the board, add a starting message in "message" and reset the background of "message". 
 
 ### Improvements for future iterations
