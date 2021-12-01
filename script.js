@@ -358,7 +358,7 @@ function greenSquare (e){
     e.target.style.backgroundColor = '#32cd32';
 }
 function blueSquare (e){
-    e.target.style.backgroundColor = '#0000cd';
+    e.target.style.backgroundColor = '#1e90ff';
 }
 function redSquare (e){
     e.target.style.backgroundColor = '#ff0000';
