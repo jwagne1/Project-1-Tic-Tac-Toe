@@ -3,18 +3,15 @@
 The Tic Tac Toe project is used to put in practice all the applicable methods and tools the SEI student has learned on HTML, CSS, and JavaScript.
 The goal of the application is to create a fun and dynamic game of Tic Tac Toe, which the player(s) will find intuitive and engaging.
 
+
 ### Getting started
-To enjoy the Tic Tac Toe the user requires only a web browser and access to internet.
+To enjoy the Tic Tac Toe game, the user requires only a web browser and access to internet.
 
 Recommended browsers include: 
 Firefox
 Chrome
 Safari
 Edge
-
-### Screenshot of Tic Tac Toe running in the browser
-
-
 
 ### List of User Stories
 As a user, I should be able to start a new tic tac toe game
@@ -29,5 +26,6 @@ As a user, I should be able to play the game again without refreshing the page
 HyperText Markup Language (HTML)
 Cascading Style Sheets (CSS)
 JavaScript
+MS Excel - for wireframing and tracking progress
 
 ###
