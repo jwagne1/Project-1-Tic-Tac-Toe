@@ -9,10 +9,10 @@ The goal of the application is to create a fun and dynamic game of Tic Tac Toe, 
 To enjoy the Tic Tac Toe game, the user requires only a web browser and access to internet.
 
 Recommended browsers include: 
-* Firefox
-* Chrome
-* Safari
-* Edge
+* [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+* [Chrome](https://www.google.com/chrome/)
+* [Safari](https://support.apple.com/downloads/safari)
+* [Edge](https://www.microsoft.com/en-us/edge)
 
 ### User Stories
 * As a user, I should be able to start a new tic tac toe game
