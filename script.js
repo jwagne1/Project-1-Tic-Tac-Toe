@@ -1,5 +1,6 @@
 //In section below I selected the elements using DOM to add event listeners when each square is clicked.
 const body = document.querySelector("body");
+
 const message = document.querySelector('#message');
 
 const cell2 = document.querySelector('#cell2');
@@ -34,15 +35,18 @@ newGameButton.addEventListener('click',clearSquare);
 
 const grid = document.querySelectorAll('.square');
 
-//Fucntion below is used to clear the game when newGameButton is clicked. 
+//Function below is used to clear the game when newGameButton is clicked. 
 function clearSquare (){
     for (let i=0; i <grid.length; i++){
         grid[i].innerHTML='';
     }
     message.innerHTML = 'Player 1, click on a square to start';
+    message.style.color = '#000000';
+    message.style.backgroundColor = 'transparent';
     player = 1; 
     squareTaken = 0; 
-    whoWon = 0;  
+    whoWon = 0;
+      
 }
 //Function below is used to warn a player that a square has already been selected.
 let squareTaken = 0;
@@ -259,7 +263,11 @@ function winner() {
         cell8.innerHTML === 'X' && 
         cell12.innerHTML === 'X'))
         {
-            message.innerHTML = 'Player 1 wins!';
+            message.classList.add('winMessage');
+            const winMessage = document.querySelector('.winMessage');
+            winMessage.innerHTML = 'Player 1 wins!';
+            winMessage.style.color = '#0000cd';
+            winMessage.style.backgroundColor = '#ffd700';
             whoWon = 1;        
         } else if((cell2.innerHTML === 'O' && 
         cell3.innerHTML === 'O' && 
@@ -293,11 +301,19 @@ function winner() {
         cell8.innerHTML === 'O' && 
         cell12.innerHTML === 'O'))
         {    
-        message.innerHTML = 'Player 2 wins!';
-        whoWon = 2;
+            message.classList.add('winMessage');
+            const winMessage = document.querySelector('.winMessage');
+            winMessage.innerHTML = 'Player 2 wins!';
+            winMessage.style.color = '#0000cd';
+            winMessage.style.backgroundColor = '#ffd700';
+            whoWon = 2;
         } else if((squareTaken === 9) && (whoWon === 0)) {
-            message.innerHTML = 'Tie! Want to play again?';           
-            }
+            message.classList.add('winMessage');
+            const winMessage = document.querySelector('.winMessage');
+            winMessage.innerHTML = 'It\'s a tie! Want to play again?';
+            winMessage.style.color = '#000000';
+            winMessage.style.backgroundColor = '#c0c0c0';;           
+        }
     } //console.log(whoWon);
 } 
 //Function below stops players from continuing to play by displaying who the winner is and asking player if they want to play again.
@@ -309,4 +325,44 @@ function finalMessage(){
         }
     }
 }
+//Functions to add color when hovering with mouse and remove it when mouse is out of square and button.
 
+cell2.addEventListener('mouseover', goldSquare);
+cell2.addEventListener('mouseout', unColorSquare);
+cell3.addEventListener('mouseover', greenSquare);
+cell3.addEventListener('mouseout', unColorSquare);
+cell4.addEventListener('mouseover', blueSquare);
+cell4.addEventListener('mouseout', unColorSquare);
+cell7.addEventListener('mouseover', greenSquare);
+cell7.addEventListener('mouseout', unColorSquare);
+cell8.addEventListener('mouseover', goldSquare);
+cell8.addEventListener('mouseout', unColorSquare);
+cell9.addEventListener('mouseover', redSquare);
+cell9.addEventListener('mouseout', unColorSquare);
+cell12.addEventListener('mouseover', blueSquare);
+cell12.addEventListener('mouseout', unColorSquare);
+cell13.addEventListener('mouseover', redSquare);
+cell13.addEventListener('mouseout', unColorSquare);
+cell14.addEventListener('mouseover', goldSquare);
+cell14.addEventListener('mouseout', unColorSquare);
+
+newGameButton.addEventListener('mouseover',greenSquare);
+newGameButton.addEventListener('mouseout',function(e){
+    e.target.style.backgroundColor = 'black'
+});
+
+function goldSquare (e){
+    e.target.style.backgroundColor = '#ffdf00';
+}
+function greenSquare (e){
+    e.target.style.backgroundColor = '#32cd32';
+}
+function blueSquare (e){
+    e.target.style.backgroundColor = '#0000cd';
+}
+function redSquare (e){
+    e.target.style.backgroundColor = '#ff0000';
+}
+function unColorSquare (e){
+    e.target.style.backgroundColor = 'transparent';
+}

@@ -4,12 +4,9 @@ body{
     height: 80vh; */
     max-width: 1000px;
     max-height: 1000px;
-      
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    
-    
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;        
   }
 *{
     box-sizing: border-box;
@@ -18,9 +15,7 @@ body{
 @media screen and (max-width: 600px) {
     nav {
         grid-row: 6;
-        grid-column: 1 / span 5;
-        
-        
+        grid-column: 1 / span 5;         
     }
 }
 
@@ -98,8 +93,12 @@ border-right: 5px solid black;
     font-size: 3vh;
     grid-row: 5;
     grid-column: 1 / span 5;
-    text-align: center;
-    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    /* text-align: center;
+    vertical-align: middle; */
     color: black;
     margin: 40px;
 }
@@ -113,7 +112,7 @@ border-right: 5px solid black;
     border-radius: 10px;
     vertical-align: middle;
     align-items: center;
-    font-size: 1.5vh;
+    font-size: 1.75vh;
     font-family: 'Comic Sans MS', sans-serif;
 }
 .square{
