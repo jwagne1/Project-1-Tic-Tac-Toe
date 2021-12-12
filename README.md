@@ -40,7 +40,7 @@ Recommended browsers include:
     * In _style.css_ I created a grid for the body of the HTML, and assigned different elements to the appropriate parts of the grid.
     * Once the elements were positioned, I opened _script.js_ and started defining the variables that I would need in order to use within functions and add event listeners to them.
     * From them on, adding code became an iterative process of trying to make different aspects of the game functional, e.g., "I should be able to click on a square to add X first and then O, and so on".
-3. Problem-solving - As I moved along and got stuck in several issues not working, I referred back to the advice of the instructors: "Start with what you can make work" and "Make it work, then make it better". To try and solve issues with the code (after some fits of rage and verbal abuse to my computer) I did the following:
+3. Problem-solving - As I moved along and got stuck in several issues not working, I referred back to the advice of the instructors: "Start with what you can make work" and "Make it work, then make it better". To try and solve issues with the code, I did the following:
     * Defined the issue as best I could and searched for those terms.
     * Went back to some of the GA lessons for examples.
     * Referred back to comments I made in the code of the labs we had in class.
